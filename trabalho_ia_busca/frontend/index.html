@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA - Rotas Logísticas Brasil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Rotas Logísticas entre Capitais</h1>
+    <p>A*, Kruskal e Algoritmo Genético aplicados ao problema de transporte de cargas.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Consulta de rota</h2>
+      <div class="grid">
+        <label>Origem<select id="origem"></select></label>
+        <label>Destino<select id="destino"></select></label>
+        <label>Tipo de rota
+          <select id="tipo">
+            <option value="rodovia">A* somente rodovia</option>
+            <option value="kruskal">A* com ferrovias do Kruskal</option>
+            <option value="genetico">A* com ferrovias do Algoritmo Genético</option>
+          </select>
+        </label>
+      </div>
+      <button onclick="buscarRota()">Calcular rota mais barata</button>
+      <pre id="resultadoRota"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Malha ferroviária por Kruskal</h2>
+      <button onclick="carregarKruskal()">Gerar MST</button>
+      <pre id="resultadoKruskal"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Otimização por Algoritmo Genético</h2>
+      <p>O orçamento usado é 60% do custo total calculado no Kruskal.</p>
+      <button onclick="carregarGenetico()">Executar/consultar AG</button>
+      <pre id="resultadoGenetico"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
