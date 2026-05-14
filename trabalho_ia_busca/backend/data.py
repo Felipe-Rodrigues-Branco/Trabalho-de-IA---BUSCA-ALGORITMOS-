@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-Dados do grafo das capitais brasileiras.
+"Dados do grafo das capitais brasileiras.
 Observação: as distâncias foram estimadas a partir de coordenadas geográficas com fator rodoviário.
-Para entrega final, recomenda-se substituir pelos valores exatos obtidos no Google Maps.
-"""
+Caso ache necessário poderá utilizar os valores reais do google maps"
+
 from math import radians, sin, cos, asin, sqrt
 
 CAPITAIS = {
